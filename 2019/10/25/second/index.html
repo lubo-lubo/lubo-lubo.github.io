@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>second | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="static类变量和类方法（静态变量和静态方法） 类变量和类方法再字节码加载完毕后就已经被初始化，在JVM中独一份 在创建对象之前就可以通过类名调用类方法 类中的各对象在创建后都保留类变量的副本，它们共享类变量 类方法不能调用实例方法，这与它们在JVM先后顺序有关  实例变量和实例方法（非静态变量和非静态方法） 实例变量会在对象实例化后初始化，有多少对象就有多少实例变量 实例方法也在类字节码加载完">
+<meta property="og:type" content="article">
+<meta property="og:title" content="second">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;10&#x2F;25&#x2F;second&#x2F;index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="static类变量和类方法（静态变量和静态方法） 类变量和类方法再字节码加载完毕后就已经被初始化，在JVM中独一份 在创建对象之前就可以通过类名调用类方法 类中的各对象在创建后都保留类变量的副本，它们共享类变量 类方法不能调用实例方法，这与它们在JVM先后顺序有关  实例变量和实例方法（非静态变量和非静态方法） 实例变量会在对象实例化后初始化，有多少对象就有多少实例变量 实例方法也在类字节码加载完">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;10&#x2F;25&#x2F;second&#x2F;%E4%BA%8C%E5%93%88.jpg">
+<meta property="og:updated_time" content="2019-10-25T01:35:37.841Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;10&#x2F;25&#x2F;second&#x2F;%E4%BA%8C%E5%93%88.jpg">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-second" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/10/25/second/" class="article-date">
+  <time datetime="2019-10-25T01:31:14.000Z" itemprop="datePublished">2019-10-25</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      second
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="static"><a href="#static" class="headerlink" title="static"></a>static</h1><h2 id="类变量和类方法（静态变量和静态方法）"><a href="#类变量和类方法（静态变量和静态方法）" class="headerlink" title="类变量和类方法（静态变量和静态方法）"></a>类变量和类方法（静态变量和静态方法）</h2><ul>
+<li>类变量和类方法再字节码加载完毕后就已经被初始化，在JVM中独一份</li>
+<li>在创建对象之前就可以通过类名调用类方法</li>
+<li>类中的各对象在创建后都保留类变量的副本，它们共享类变量</li>
+<li>类方法不能调用实例方法，这与它们在JVM先后顺序有关</li>
+</ul>
+<h2 id="实例变量和实例方法（非静态变量和非静态方法）"><a href="#实例变量和实例方法（非静态变量和非静态方法）" class="headerlink" title="实例变量和实例方法（非静态变量和非静态方法）"></a>实例变量和实例方法（非静态变量和非静态方法）</h2><ul>
+<li>实例变量会在对象实例化后初始化，有多少对象就有多少实例变量</li>
+<li>实例方法也在类字节码加载完毕后就准备好了，但是在对象实例化之前不能被调用</li>
+<li>实例方法可以调用类方法，反之则不行</li>
+</ul>
+<h2 id="静态工厂设计模式"><a href="#静态工厂设计模式" class="headerlink" title="静态工厂设计模式"></a>静态工厂设计模式</h2><blockquote>
+<p>构造器被private修饰时，就不能够在本类外直接通过new新建对象<br>此时，可以在类内部声明一个public修饰的静态工厂方法代替构造器的功能<br>它返回本类对象，方法体中调用私有化的构造器创建对象，并返回这个对象</p>
+</blockquote>
+<ul>
+<li>静态工厂方法命名比构造方法更灵活，不必规定为类名</li>
+<li>静态工厂方法返回的数据类型更丰富，而不仅仅是所在类对象</li>
+</ul>
+<h2 id="构建设计模式"><a href="#构建设计模式" class="headerlink" title="构建设计模式"></a>构建设计模式</h2><ul>
+<li>提供一个或多个构造对象的静态工厂方法，参数通常时对象的必填属性</li>
+<li>同时还会提供一些可选属性的设值方法，某种程度上替代了set方法</li>
+<li>这些设值方法在对可选属性赋值后返回了本对象(return this)，因此可以被连缀调用</li>
+</ul>
+<p><img src="/2019/10/25/second/%E4%BA%8C%E5%93%88.jpg" alt></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/10/25/second/" data-id="ck25gsatz0002v0uz7srt9dtu" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2019/10/25/NewPost/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">NewPost</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">十月 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/10/25/second/">second</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/25/NewPost/">NewPost</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/23/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
